@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
 import {NgIf, NgFor} from '@angular/common';
+import { Article } from './article';
+import { ArticleFilterPipe } from "./article-filter.pipe";
+
+import { CommonModule } from '@angular/common';
+
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-article-section',
-  imports: [NgIf, NgFor],
+  imports: [NgIf, NgFor, ArticleFilterPipe, CommonModule, FormsModule],
   templateUrl: './article-section.component.html',
   styleUrl: './article-section.component.css'
 })
@@ -14,8 +20,10 @@ export class ArticleSectionComponent {
 
   constructor() { }
   articleTitle = ""
+
+  filterText = "";
   
-  articles : any[] = [
+  articles : Article[] = [
     {content:"Spring boot nedir? Nasıl kullanılır? Özellikleri nelerdir? Avantajları ve Dezavantajları...", author:"John Doe", thumbnail:"https://miro.medium.com/v2/resize:fit:750/format:webp/1*BTasEA-PDAzcoQ0A-lPyyg.png", readTime: "5 mins"},
     {content:"JavaScript nedir? Temel kavramlar ve kullanım alanları...", author:"Jane Smith", thumbnail:"https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png", readTime: "4 mins"},
     {content:"React ile modern web uygulamaları geliştirme...", author:"Bob Brown", thumbnail:"https://www.python.org/static/community_logos/python-logo.png", readTime: "8 mins"},
