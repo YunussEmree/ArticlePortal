@@ -32,12 +32,14 @@ export class ArticleSectionComponent implements OnInit {
 
   selectedArticle!: Article;
 
+
   viewArticle(articleId: number){
-    this.http.get<Article[]>("http://localhost:3000/api/articles?id="+articleId).subscribe(
-      (response: Article[]) => {
-        response[0].content = response[0].content.replace(/\n/g, "<br>");
-        this.selectedArticle = response[0];
-        this.AlertifyService.alert(this.selectedArticle.content);
+    this.http.get<Article>("http://localhost:3000/api/articles/"+articleId).subscribe(
+      (response: Article) => {
+          response.content = response.content.replace(/\n/g, "<br>");
+          this.selectedArticle = response;
+          this.AlertifyService.alert(this.selectedArticle.content);
+        
       }
     );
   }

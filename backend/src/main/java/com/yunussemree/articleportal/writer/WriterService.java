@@ -50,7 +50,7 @@ public class WriterService {
         writerDTO.setId(writer.getId());
         writerDTO.setUsername(writer.getUsername());
         writerDTO.setAbout(writer.getAbout());
-        writerDTO.setPhotoUrl(writer.getPhotoUrl());
+        writerDTO.setPhoto(writer.getPhoto());
         writerDTO.setRating(writer.getRating());
         return writerDTO;
     }
@@ -58,7 +58,7 @@ public class WriterService {
     private Writer mapToEntity(final WriterDTO writerDTO, final Writer writer) {
         writer.setUsername(writerDTO.getUsername());
         writer.setAbout(writerDTO.getAbout());
-        writer.setPhotoUrl(writerDTO.getPhotoUrl());
+        writer.setPhoto(writerDTO.getPhoto());
         writer.setRating(writerDTO.getRating());
         return writer;
     }

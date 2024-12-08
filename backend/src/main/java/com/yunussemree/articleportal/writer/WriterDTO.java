@@ -22,7 +22,7 @@ public class WriterDTO {
 
     @NotNull
     @Size(max = 255)
-    private String photoUrl;
+    private String photo;
 
     @NotNull
     private Double rating;
