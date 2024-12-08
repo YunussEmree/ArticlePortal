@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Website</title>
+  <style>
+    .hero {
+      background-color: #f8f9fa;
+      padding: 50px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      
+            <div class="col-md-1">
+                <img src="./articlePortalLogo.png" alt="Logo">
+            </div>
+      
+      
+      
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="http://localhost:4200/home" class="nav-link px-2 link-secondary">Overview</a></li>
+              <li><a href="http://localhost:4200/articles" class="nav-link px-2 link-body-emphasis">Articles</a></li>
+              <li><a href="http://localhost:4200/writers" class="nav-link px-2 link-body-emphasis">Writers</a></li>
+            </ul>
+      
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/YunussEmree.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small">
+                <li><a class="dropdown-item" href="#">New article...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      
+      
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container">
+      <h1>Welcome to ArticleSite</h1>
+      <p>Discover a world of knowledge through captivating articles written by passionate writers.</p>
+    </div>
+  </div>
+
+  <!-- Articles Section -->
+  <div class="container my-5" id="articles">
+    <h2 class="section-title">Featured Articles</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Article 1">
+          <div class="card-body">
+            <h5 class="card-title">Article Title 1</h5>
+            <p class="card-text">A brief description of the article goes here.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Article 2">
+          <div class="card-body">
+            <h5 class="card-title">Article Title 2</h5>
+            <p class="card-text">A brief description of the article goes here.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Article 3">
+          <div class="card-body">
+            <h5 class="card-title">Article Title 3</h5>
+            <p class="card-text">A brief description of the article goes here.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article Writers Section -->
+  <div class="container my-5" id="writers">
+    <h2 class="section-title">Meet Our Writers</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Writer 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Writer Name 1</h5>
+            <p class="card-text">A short bio about the writer goes here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Writer 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Writer Name 2</h5>
+            <p class="card-text">A short bio about the writer goes here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Writer 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Writer Name 3</h5>
+            <p class="card-text">A short bio about the writer goes here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4">
+    <p>&copy; 2024 ArticleSite. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
