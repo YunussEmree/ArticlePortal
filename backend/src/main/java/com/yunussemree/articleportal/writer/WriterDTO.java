@@ -1,4 +1,4 @@
-package com.yunussemree.articleportal.article;
+package com.yunussemree.articleportal.writer;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -8,25 +8,23 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ArticleDTO {
+public class WriterDTO {
 
     private Long id;
 
     @NotNull
     @Size(max = 255)
-    private String title;
-
-    @NotNull
-    private String content;
+    private String username;
 
     @NotNull
     @Size(max = 255)
-    private String author;
+    private String about;
 
     @NotNull
-    private String thumbnail;
+    @Size(max = 255)
+    private String photoUrl;
 
     @NotNull
-    private Integer readTime;
+    private Double rating;
 
 }

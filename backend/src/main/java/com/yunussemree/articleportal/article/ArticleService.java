@@ -1,7 +1,8 @@
 package com.yunussemree.articleportal.article;
 
-import com.yunussemree.articleportal.util.exceptions.NotFoundException;
 import java.util.List;
+
+import com.yunussemree.articleportal.util.exceptions.NotFoundException;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -48,17 +49,19 @@ public class ArticleService {
     private ArticleDTO mapToDTO(final Article article, final ArticleDTO articleDTO) {
         articleDTO.setId(article.getId());
         articleDTO.setTitle(article.getTitle());
-        articleDTO.setDescription(article.getDescription());
         articleDTO.setContent(article.getContent());
-        articleDTO.setOwnerId(article.getOwnerId());
+        articleDTO.setAuthor(article.getAuthor());
+        articleDTO.setThumbnail(article.getThumbnail());
+        articleDTO.setReadTime(article.getReadTime());
         return articleDTO;
     }
 
     private Article mapToEntity(final ArticleDTO articleDTO, final Article article) {
         article.setTitle(articleDTO.getTitle());
-        article.setDescription(articleDTO.getDescription());
         article.setContent(articleDTO.getContent());
-        article.setOwnerId(articleDTO.getOwnerId());
+        article.setAuthor(articleDTO.getAuthor());
+        article.setThumbnail(articleDTO.getThumbnail());
+        article.setReadTime(articleDTO.getReadTime());
         return article;
     }
 
