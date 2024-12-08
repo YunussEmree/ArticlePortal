@@ -6,10 +6,11 @@ import { WritersSectionComponent } from "./writers-section/writers-section.compo
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HomeComponent } from "./home/home.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ArticleSectionComponent, LoginComponent, WritersSectionComponent, CommonModule, FormsModule],
+  imports: [RouterOutlet, ArticleSectionComponent, LoginComponent, WritersSectionComponent, CommonModule, FormsModule, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

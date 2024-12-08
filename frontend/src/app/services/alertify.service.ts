@@ -21,4 +21,7 @@ export class AlertifyService {
   message(message: string){
     alertify.message(message);
   }
+  alert(message: string){
+    alertify.alert(message);
+  }
 }

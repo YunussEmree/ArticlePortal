@@ -9,10 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { AlertifyService } from '../services/alertify.service';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-article-section',
-  imports: [NgIf, NgFor, ArticleFilterPipe, CommonModule, FormsModule, HttpClientModule],
+  imports: [NgIf, NgFor, ArticleFilterPipe, CommonModule, FormsModule, HttpClientModule, RouterModule],
   templateUrl: './article-section.component.html',
   styleUrls: ['./article-section.component.css']
 })
@@ -29,14 +30,21 @@ export class ArticleSectionComponent implements OnInit {
   
   articles!: Article[];
 
+  selectedArticle!: Article;
+
   viewArticle(articleId: number){
-    this.AlertifyService.success("Article with id: " + articleId + " is selected.");
+    this.http.get<Article[]>("http://localhost:3000/api/articles?id="+articleId).subscribe(
+      (response: Article[]) => {
+        response[0].content = response[0].content.replace(/\n/g, "<br>");
+        this.selectedArticle = response[0];
+        this.AlertifyService.alert(this.selectedArticle.content);
+      }
+    );
   }
 
   ngOnInit(): void {
-  this.http.get<Article[]>("http://localhost:3000/articles").subscribe(
+  this.http.get<Article[]>("http://localhost:3000/api/articles").subscribe(
     (response: Article[]) => {
-      console.log(response);
       this.articles = response;
     }
   );

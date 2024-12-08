@@ -17,9 +17,9 @@
 
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-        <li><a href="#" class="nav-link px-2 link-body-emphasis">Articles</a></li>
-        <li><a href="#" class="nav-link px-2 link-body-emphasis">Writers</a></li>
+        <li><a href="http://localhost:4200/home" class="nav-link px-2 link-secondary">Overview</a></li>
+        <li><a href="http://localhost:4200/articles" class="nav-link px-2 link-body-emphasis">Articles</a></li>
+        <li><a href="http://localhost:4200/writers" class="nav-link px-2 link-body-emphasis">Writers</a></li>
       </ul>
 
       <div class="dropdown text-end">
@@ -72,7 +72,7 @@
           />
           <div class="card-body">
             <p class="card-text">
-              {{article.content}}
+              {{article.title}}
             </p>
             <div class="d-flex align-items-center mb-2">
               <img
@@ -84,11 +84,12 @@
             </div>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button (click)="viewArticle(article.id)" type="button" class="btn btn-sm btn-outline-secondary">
+                <a (click)="viewArticle(article.id)" class="btn btn-sm btn-outline-secondary">
                   View
-                </button>
+                </a>
+                
               </div>
-              <small class="text-body-secondary"> {{article.readTime}}</small>
+              <small class="text-body-secondary"> {{article.readTime}} min</small>
             </div>
           </div>
         </div>
