@@ -3,8 +3,10 @@ export class Article{
     author: string;
     thumbnail: string;
     readTime: string;
+    id: number;
 
-    constructor(content: string, author: string, thumbnail: string, readTime: string) {
+    constructor(content: string, author: string, thumbnail: string, readTime: string, id: number){ 
+        this.id = id;
         this.content = content;
         this.author = author;
         this.thumbnail = thumbnail;
