@@ -1,236 +1,67 @@
+
+
+
+<header class="p-3 mb-3 border-bottom">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+      <div class="col-md-1">
+          <img src="./articlePortalLogo.png" alt="Logo">
+      </div>
+
+      <div class="col-md-3 mb-2 mb-md-0">
+          <form class="col-lg-auto mb-3 mb-lg-0 me-lg-3 order-lg-1 justify-content-center" role="search">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search"  name="search" [(ngModel)]="filterText">
+          </form>
+        </div>
+
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="http://localhost:4200/home" class="nav-link px-2 link-secondary">Overview</a></li>
+        <li><a href="http://localhost:4200/articles" class="nav-link px-2 link-body-emphasis">Articles</a></li>
+        <li><a href="http://localhost:4200/writers" class="nav-link px-2 link-body-emphasis">Writers</a></li>
+      </ul>
+
+      <div class="dropdown text-end">
+        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/YunussEmree.png" alt="mdo" width="32" height="32" class="rounded-circle">
+        </a>
+        <ul class="dropdown-menu text-small">
+          <li><a class="dropdown-item" href="#">New article...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://github.com/YunussEmree.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-            <div class="card-body">
-              <p class="card-text"><strong>Yunus Emre Şenyiğit</strong></p>
-              <p class="card-text">Aktif teknoloji makale yazarı, Yazılım Mühendisi, Java sevdalısı</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-                </div>
-                <small class="rating" style="color: #2ab047;">★4.86</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://github.com/engindemirog.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-            <div class="card-body">
-              <p class="card-text"><strong>Engin Demiroğ</strong></p>
-              <p class="card-text">Instructor & Lifetime learner.
-                Software Engineer
-                www.kodlama.io</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-                </div>
-                <small class="rating" style="color: #d11313;">★1.54</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-              <img src="https://github.com/atilsamancioglu.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-              <div class="card-body">
-            <p class="card-text"><strong>Atıl Samancıoğlu</strong></p>
-            <p class="card-text">Bestselling Instructor &#64;udemy || Instructor &#64;unibogazici || Ceo &#64;academyclubtr
-              </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-              </div>
-            <small class="rating" style="color: #c98d14;">★3.96</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-              <img src="https://github.com/sahinyanlik.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-              <div class="card-body">
-            <p class="card-text"><strong>Şahin Yanlık</strong></p>
-            <p class="card-text">Software Developer, Blogger, Open Source Enthusiast</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-              </div>
-            <small class="rating" style="color: #2ab047;">★4.75</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-              <img src="https://github.com/omergulcicek.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-              <div class="card-body">
-            <p class="card-text"><strong>Ömer Gülçiçek</strong></p>
-            <p class="card-text">Frontend Developer, Blogger, Speaker</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-              </div>
-            <small class="rating" style="color: #d2d918;">★2.60</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-              <img src="https://github.com/ibrahimgunduz.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-              <div class="card-body">
-            <p class="card-text"><strong>İbrahim Gündüz</strong></p>
-            <p class="card-text">Full Stack Developer, Tech Enthusiast</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-              </div>
-            <small class="rating" style="color: #c98d14;">★3.50</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-              <img src="https://github.com/aykutkardas.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-              <div class="card-body">
-            <p class="card-text"><strong>Aykut Kardaş</strong></p>
-            <p class="card-text">Software Engineer, Open Source Contributor</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-              </div>
-            <small class="rating" style="color: #d2d918;">★2.40</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-              <img src="https://github.com/ahmetozantekin.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-              <div class="card-body">
-            <p class="card-text"><strong>Ahmet Ozan Tekin</strong></p>
-            <p class="card-text">Backend Developer, Tech Writer</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-              </div>
-            <small class="rating" style="color: #d11313;">★1.30</small>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col">
-            <div class="card shadow-sm">
-              <img src="https://github.com/serkansokmen.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-              <div class="card-body">
-            <p class="card-text"><strong>Serkan Sökmen</strong></p>
-            <p class="card-text">DevOps Engineer, Cloud Enthusiast</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-              </div>
-            <small class="rating" style="color: #c98d14;">★3.10</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-              <img src="https://github.com/LuNiZz.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-              <div class="card-body">
-            <p class="card-text"><strong>Can Değer</strong></p>
-            <p class="card-text">Beyaz Takkeli Tornaci 👋 Can Deger https://www.youtube.com/&#64;candeger
-              </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-              </div>
-            <small class="rating" style="color: #d11313;">★1.35</small>
+        <div class="col" *ngFor="let writer of writers | writerfilter:filterText">
+          <div class="card shadow-sm">
+            <img [src]="writer.photo" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
+            <div class="card-body">
+              <p class="card-text"><strong> {{ writer.username }} </strong></p>
+              <p class="card-text">{{ writer.about }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
+                </div>
+                <small class="rating" style="color: #2ab047;">★ {{ writer.rating }}</small>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-            <img src="https://github.com/addyosmani.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-            <div class="card-body">
-                <p class="card-text"><strong>Addy Osmani</strong></p>
-                <p class="card-text">Engineering Manager at Google working on Chrome</p>
-                <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-                </div>
-                <small class="rating" style="color: #2ab047;">★4.85</small>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-            <img src="https://github.com/una.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-            <div class="card-body">
-                <p class="card-text"><strong>Una Kravets</strong></p>
-                <p class="card-text">Developer Advocate at Google, CSS & SVG enthusiast</p>
-                <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-                </div>
-                <small class="rating" style="color: #d2d918;">★2.80</small>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-            <img src="https://github.com/emmabostian.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-            <div class="card-body">
-                <p class="card-text"><strong>Emma Bostian</strong></p>
-                <p class="card-text">Software Engineer at Spotify, Co-host of the Ladybug Podcast</p>
-                <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-                </div>
-                <small class="rating" style="color: #2ab047;">★4.75</small>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-            <img src="https://github.com/ladyleet.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-            <div class="card-body">
-                <p class="card-text"><strong>Tracy Lee</strong></p>
-                <p class="card-text">CEO at This Dot Labs, Google Developer Expert</p>
-                <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-                </div>
-                <small class="rating" style="color: #2ab047;">★4.85</small>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow-sm">
-            <img src="https://github.com/charliewen.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Profile Photo">
-            <div class="card-body">
-                <p class="card-text"><strong>Charlie Wen</strong></p>
-                <p class="card-text">Software Engineer at Facebook, Open Source Contributor</p>
-                <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
-                </div>
-                <small class="rating" style="color: #d2d918;">★2.80</small>
-                </div>
-            </div>
-            </div>
         </div>
     </div>
 

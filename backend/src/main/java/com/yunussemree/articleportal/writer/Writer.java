@@ -1,4 +1,4 @@
-package com.yunussemree.articleportal.article;
+package com.yunussemree.articleportal.writer;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,8 +9,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import java.time.OffsetDateTime;
-
-import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
@@ -19,11 +17,11 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 
 @Entity
-@Table(name = "Articles")
+@Table(name = "Writers")
 @EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
-public class Article {
+public class Writer {
 
     @Id
     @Column(nullable = false, updatable = false)
@@ -40,19 +38,15 @@ public class Article {
     private Long id;
 
     @Column(nullable = false)
-    private String title;
+    private String username;
 
     @Column(nullable = false)
-    @Size(max = 2555)
-    private String content;
+    private String about;
 
     @Column(nullable = false)
-    private String author;
+    private String photoUrl;
 
     @Column(nullable = false)
-    private String thumbnail;
-
-    @Column(nullable = false)
-    private Integer readTime;
+    private Double rating;
 
 }
