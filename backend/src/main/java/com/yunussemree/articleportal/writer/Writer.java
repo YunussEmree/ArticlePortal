@@ -44,7 +44,7 @@ public class Writer {
     private String about;
 
     @Column(nullable = false)
-    private String photoUrl;
+    private String photo;
 
     @Column(nullable = false)
     private Double rating;

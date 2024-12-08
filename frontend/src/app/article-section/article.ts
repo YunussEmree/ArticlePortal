@@ -1,12 +1,13 @@
 export class Article{
+    readTime: number;
+    id: number;
+    
     title: string;
     author: string;
     thumbnail: string;
-    readTime: string;
-    id: number;
     content: string;
 
-    constructor(title: string, author: string, thumbnail: string, readTime: string, id: number, content: string){ 
+    constructor(title: string, author: string, thumbnail: string, readTime: number, id: number, content: string){ 
         this.id = id;
         this.title = title;
         this.content = content;
