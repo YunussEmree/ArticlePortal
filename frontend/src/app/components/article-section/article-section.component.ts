@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {NgIf, NgFor} from '@angular/common';
 import { Article } from './article';
-import { ArticleFilterPipe } from "./article-filter.pipe";
+import { ArticleFilterPipe } from "../../pipes/articleFilter/article-filter.pipe";
 
 import { CommonModule } from '@angular/common';
 
 import { FormsModule } from '@angular/forms'; 
-import { AlertifyService } from '../services/alertify.service';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { AlertifyService } from '../services/alertify.service';
 
 @Component({
   selector: 'app-article-section',
@@ -39,7 +39,6 @@ export class ArticleSectionComponent implements OnInit {
           response.content = response.content.replace(/\n/g, "<br>");
           this.selectedArticle = response;
           this.AlertifyService.alert(this.selectedArticle.content);
-        
       }
     );
   }

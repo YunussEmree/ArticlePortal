@@ -1,4 +1,4 @@
-import { WriterfilterPipe } from './writerfilter.pipe';
+import { WriterfilterPipe } from "./writerfilter.pipe";
 
 describe('WriterfilterPipe', () => {
   it('create an instance', () => {

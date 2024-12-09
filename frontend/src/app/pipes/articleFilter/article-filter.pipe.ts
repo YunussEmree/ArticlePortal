@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Article } from './article';
+import { Article } from '../../components/article-section/article';
 import { filter } from 'rxjs';
 
 @Pipe({
