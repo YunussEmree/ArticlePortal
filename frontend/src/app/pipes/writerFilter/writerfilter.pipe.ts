@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Writer } from './writer';
+import { Writer } from '../../components/writers-section/writer';
 
 @Pipe({
   name: 'writerfilter'

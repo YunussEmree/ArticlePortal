@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Writer } from './writer';
 import { AlertifyService } from '../services/alertify.service';
 import { HttpClient } from '@angular/common/http';
-import { WriterfilterPipe } from './writerfilter.pipe';
+import { WriterfilterPipe } from '../../pipes/writerFilter/writerfilter.pipe';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -30,7 +30,6 @@ export class WritersSectionComponent {
   ngOnInit(): void {
   this.http.get<Writer[]>("http://localhost:3000/api/writers").subscribe(
     (response: Writer[]) => {
-      console.log(response);
       this.writers = response;
     }
   );
