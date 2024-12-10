@@ -27,6 +27,40 @@
       height: 200px;
       object-fit: cover;
     }
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+    .card:hover .overlay {
+      opacity: 0.95;
+    }
+    .overlay-text {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transform: scale(1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .card:hover .overlay-text {
+      transform: scale(1.3);
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -72,38 +106,42 @@
       <p>Discover a world of knowledge through captivating articles written by passionate writers.</p>
     </div>
   </div>
-
-  <!-- Articles Section -->
   <div class="container my-5" id="articles">
     <h2 class="section-title">Featured Articles</h2>
     <div class="row">
       <div class="col-md-4">
         <div class="card">
-          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Article 1">
+          <img src="https://www.python.org/static/community_logos/python-logo.png" class="card-img-top" alt="Article 1">
+          <div class="overlay">
+            <span class="overlay-text"><a href="http://localhost:4200/articles" style="text-decoration: none;">Makaleleri İnceleyin</a> </span>
+          </div>
           <div class="card-body">
-            <h5 class="card-title">Article Title 1</h5>
-            <p class="card-text">A brief description of the article goes here.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
+            <h5 class="card-title">Python ve daha fazlası...</h5>
+            <p class="card-text">Python nerelerde kullanılır, avantajları ve dezavantajları nelerdir?</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Article 2">
+          <img src="https://d3caycb064h6u1.cloudfront.net/wp-content/uploads/2021/06/Machine_Learning-1024x819.jpg" class="card-img-top" alt="Article 2">
+          <div class="overlay">
+            <span class="overlay-text"><a href="http://localhost:4200/articles" style="text-decoration: none;">Makaleleri İnceleyin</a> </span>
+          </div>
           <div class="card-body">
-            <h5 class="card-title">Article Title 2</h5>
-            <p class="card-text">A brief description of the article goes here.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
+            <h5 class="card-title">Yapay zeka</h5>
+            <p class="card-text">Yapay zeka, derin öğrenme, pekiştirmeli öğrenme, makine öğrenmesi ve çok daha fazlası...</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Article 3">
+          <img src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*BTasEA-PDAzcoQ0A-lPyyg.png" class="card-img-top" alt="Article 3">
+          <div class="overlay">
+            <span class="overlay-text"><a href="http://localhost:4200/articles" style="text-decoration: none;">Makaleleri İnceleyin</a> </span>
+          </div>
           <div class="card-body">
-            <h5 class="card-title">Article Title 3</h5>
-            <p class="card-text">A brief description of the article goes here.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
+            <h5 class="card-title">Spring Boot</h5>
+            <p class="card-text">Backend de spring boot kullanımı. Spring boot bağımlılıkları...</p>
           </div>
         </div>
       </div>
@@ -116,37 +154,57 @@
     <div class="row">
       <div class="col-md-4">
         <div class="card">
-          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Writer 1">
+          <img src="https://github.com/LuNiZz.png" class="card-img-top" alt="Writer 1">
+          <div class="overlay">
+            <span class="overlay-text"><a href="http://localhost:4200/writers" style="text-decoration: none;">Yazarları İnceleyin</a> </span>
+          </div>
           <div class="card-body text-center">
-            <h5 class="card-title">Writer Name 1</h5>
-            <p class="card-text">A short bio about the writer goes here.</p>
+            <h5 class="card-title">Can Değer</h5>
+            <p class="card-text">Beyaz Takkeli Tornaci 👋 Can Deger https://www.youtube.com/&#64;candeger</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Writer 2">
+          <img src="https://github.com/atilsamancioglu.png" class="card-img-top" alt="Writer 2">
+          <div class="overlay">
+            <span class="overlay-text"><a href="http://localhost:4200/writers" style="text-decoration: none;">Yazarları İnceleyin</a> </span>
+          </div>
           <div class="card-body text-center">
-            <h5 class="card-title">Writer Name 2</h5>
-            <p class="card-text">A short bio about the writer goes here.</p>
+            <h5 class="card-title">Atıl Samancıoğlu</h5>
+            <p class="card-text">Bestselling Instructor &#64;udemy || Instructor &#64;unibogazici || Ceo &#64;academyclubtr</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Writer 3">
+          <img src="https://github.com/engindemirog.png" class="card-img-top" alt="Writer 3">
+          <div class="overlay">
+            <span class="overlay-text"><a href="http://localhost:4200/writers" style="text-decoration: none;">Yazarları İnceleyin</a> </span>
+          </div>
           <div class="card-body text-center">
-            <h5 class="card-title">Writer Name 3</h5>
-            <p class="card-text">A short bio about the writer goes here.</p>
+            <h5 class="card-title">Engin Demiroğ</h5>
+            <p class="card-text">Instructor & Lifetime learner. Software Engineer. www.kodlama.io</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-light text-center py-4">
-    <p>&copy; 2024 ArticleSite. All rights reserved.</p>
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+    </div>
+  
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+    </ul>
   </footer>
 
 </body>
