@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgFor} from '@angular/common';
 import {RouterLink, RouterOutlet} from '@angular/router';
+import { AccountService } from '../services/account.service';
 
 
 @Component({
@@ -18,7 +19,15 @@ import {RouterLink, RouterOutlet} from '@angular/router';
 })
 export class WritersSectionComponent {
 
-  constructor(private AlertifyService : AlertifyService, private http:HttpClient) { }
+  constructor(private AlertifyService : AlertifyService, private http:HttpClient, private accountService:AccountService) { }
+
+
+  isLoggedIn() {
+    return this.accountService.isLoggedIn();
+  }
+  logout() {
+    this.accountService.logout();
+  }
   
   filterText = "";
 

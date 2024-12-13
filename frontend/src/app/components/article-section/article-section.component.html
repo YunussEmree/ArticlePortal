@@ -18,11 +18,11 @@
         <li><a href="/writers" class="nav-link px-2 link-body-emphasis">Writers</a></li>
       </ul>
 
-      <ul class="navbar-nav px-3 col-lg-auto mb-2 justify-content-center mb-md-0">
+      <ul class="navbar-nav px-3 col-lg-auto mb-2 justify-content-center mb-md-0" *ngIf="isLoggedIn()==false">
           <li><a href="/login" class="nav-link px-2 link-body-emphasis">Login</a></li>
       </ul>
 
-      <div class="dropdown text-end">
+      <div class="dropdown text-end" *ngIf="isLoggedIn()==true">
         <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="https://github.com/YunussEmree.png" alt="mdo" width="32" height="32" class="rounded-circle">
         </a>

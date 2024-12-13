@@ -7,7 +7,7 @@ import { Article } from '../article-section/article';
   providedIn: 'root'
 })
 export class ArticleService {
-  private path = "http://localhost:3000/articles";
+  private path = "/articles";
 
   constructor(private http: HttpClient) { }
 

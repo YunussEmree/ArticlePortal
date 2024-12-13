@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AlertifyService } from '../services/alertify.service';
+import { AccountService } from '../services/account.service';
 
 @Component({
   selector: 'app-article-section',
@@ -22,7 +23,15 @@ import { AlertifyService } from '../services/alertify.service';
 
 export class ArticleSectionComponent implements OnInit {
 
-  constructor(private AlertifyService : AlertifyService, private http:HttpClient) { }
+  constructor(private AlertifyService : AlertifyService, private http:HttpClient, private accountService:AccountService) { }
+
+
+  isLoggedIn() {
+    return this.accountService.isLoggedIn();
+  }
+  logout() {
+    this.accountService.logout();
+  }
 
   articleTitle = ""
 
