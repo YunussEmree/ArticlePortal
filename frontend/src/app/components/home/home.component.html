@@ -1,211 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Article Website</title>
-  <style>
-    .hero {
-      background-color: #f8f9fa;
-      padding: 50px 0;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #6c757d;
-    }
-    .section-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .card img {
-      height: 200px;
-      object-fit: cover;
-    }
-    .card {
-      position: relative;
-      overflow: hidden;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: all 0.3s ease-in-out;
-    }
-    .card:hover .overlay {
-      opacity: 0.95;
-    }
-    .overlay-text {
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      transform: scale(1);
-      transition: transform 0.3s ease-in-out;
-    }
-    .card:hover .overlay-text {
-      transform: scale(1.3);
-    }
-    .card img {
-      height: 200px;
-      object-fit: cover;
-    }
-  </style>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article Website</title>
+    <style>
+      .hero {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        color: #6c757d;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .card {
+        position: relative;
+        overflow: hidden;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+      .card:hover .overlay {
+        opacity: 0.95;
+      }
+      .overlay-text {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+      }
+      .card:hover .overlay-text {
+        transform: scale(1.3);
+      }
+      .card img {
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
     <header class="p-3 mb-3 border-bottom">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      
-            <div class="col-md-1">
-                <a href="http://localhost:4200/home" class="nav-link px-2 link-primary"> <strong>ArticlePortal</strong></a>
-            </div>
-      
-      
-      
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="http://localhost:4200/articles" class="nav-link px-2 link-body-emphasis">Articles</a></li>
-              <li><a href="http://localhost:4200/writers" class="nav-link px-2 link-body-emphasis">Writers</a></li>
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <div class="col-md-1">
+            <a
+              href="http://localhost:4200/home"
+              class="nav-link px-2 link-primary"
+            >
+              <strong>ArticlePortal</strong></a
+            >
+          </div>
+
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a
+                href="http://localhost:4200/articles"
+                class="nav-link px-2 link-body-emphasis"
+                >Articles</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://localhost:4200/writers"
+                class="nav-link px-2 link-body-emphasis"
+                >Writers</a
+              >
+            </li>
+          </ul>
+
+          <ul
+            class="navbar-nav px-3 col-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a
+                href="http://localhost:4200/login"
+                class="nav-link px-2 link-body-emphasis"
+                >Login</a
+              >
+            </li>
+          </ul>
+
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://github.com/YunussEmree.png"
+                alt="mdo"
+                width="32"
+                height="32"
+                class="rounded-circle"
+              />
+            </a>
+            <ul class="dropdown-menu text-small">
+              <li><a class="dropdown-item" href="#">New article...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
             </ul>
-      
-            <div class="dropdown text-end">
-              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://github.com/YunussEmree.png" alt="mdo" width="32" height="32" class="rounded-circle">
-              </a>
-              <ul class="dropdown-menu text-small">
-                <li><a class="dropdown-item" href="#">New article...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-              </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="container">
+        <h1>Welcome to ArticleSite</h1>
+        <p>
+          Discover a world of knowledge through captivating articles written by
+          passionate writers.
+        </p>
+      </div>
+    </div>
+    <div class="container my-5" id="articles">
+      <h2 class="section-title">Featured Articles</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://www.python.org/static/community_logos/python-logo.png"
+              class="card-img-top"
+              alt="Article 1"
+            />
+            <div class="overlay">
+              <span class="overlay-text"
+                ><a
+                  href="/articles"
+                  style="text-decoration: none"
+                  >Makaleleri İnceleyin</a
+                >
+              </span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Python ve daha fazlası...</h5>
+              <p class="card-text">
+                Python nerelerde kullanılır, avantajları ve dezavantajları
+                nelerdir?
+              </p>
             </div>
           </div>
         </div>
-      </header>
-      
-      
-      
-
-  <!-- Hero Section -->
-  <div class="hero">
-    <div class="container">
-      <h1>Welcome to ArticleSite</h1>
-      <p>Discover a world of knowledge through captivating articles written by passionate writers.</p>
-    </div>
-  </div>
-  <div class="container my-5" id="articles">
-    <h2 class="section-title">Featured Articles</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://www.python.org/static/community_logos/python-logo.png" class="card-img-top" alt="Article 1">
-          <div class="overlay">
-            <span class="overlay-text"><a href="http://localhost:4200/articles" style="text-decoration: none;">Makaleleri İnceleyin</a> </span>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Python ve daha fazlası...</h5>
-            <p class="card-text">Python nerelerde kullanılır, avantajları ve dezavantajları nelerdir?</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://d3caycb064h6u1.cloudfront.net/wp-content/uploads/2021/06/Machine_Learning-1024x819.jpg" class="card-img-top" alt="Article 2">
-          <div class="overlay">
-            <span class="overlay-text"><a href="http://localhost:4200/articles" style="text-decoration: none;">Makaleleri İnceleyin</a> </span>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Yapay zeka</h5>
-            <p class="card-text">Yapay zeka, derin öğrenme, pekiştirmeli öğrenme, makine öğrenmesi ve çok daha fazlası...</p>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://d3caycb064h6u1.cloudfront.net/wp-content/uploads/2021/06/Machine_Learning-1024x819.jpg"
+              class="card-img-top"
+              alt="Article 2"
+            />
+            <div class="overlay">
+              <span class="overlay-text"
+                ><a
+                  href="/articles"
+                  style="text-decoration: none"
+                  >Makaleleri İnceleyin</a
+                >
+              </span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Yapay zeka</h5>
+              <p class="card-text">
+                Yapay zeka, derin öğrenme, pekiştirmeli öğrenme, makine
+                öğrenmesi ve çok daha fazlası...
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*BTasEA-PDAzcoQ0A-lPyyg.png" class="card-img-top" alt="Article 3">
-          <div class="overlay">
-            <span class="overlay-text"><a href="http://localhost:4200/articles" style="text-decoration: none;">Makaleleri İnceleyin</a> </span>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Spring Boot</h5>
-            <p class="card-text">Backend de spring boot kullanımı. Spring boot bağımlılıkları...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Article Writers Section -->
-  <div class="container my-5" id="writers">
-    <h2 class="section-title">Meet Our Writers</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://github.com/LuNiZz.png" class="card-img-top" alt="Writer 1">
-          <div class="overlay">
-            <span class="overlay-text"><a href="http://localhost:4200/writers" style="text-decoration: none;">Yazarları İnceleyin</a> </span>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Can Değer</h5>
-            <p class="card-text">Beyaz Takkeli Tornaci 👋 Can Deger https://www.youtube.com/&#64;candeger</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://github.com/atilsamancioglu.png" class="card-img-top" alt="Writer 2">
-          <div class="overlay">
-            <span class="overlay-text"><a href="http://localhost:4200/writers" style="text-decoration: none;">Yazarları İnceleyin</a> </span>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Atıl Samancıoğlu</h5>
-            <p class="card-text">Bestselling Instructor &#64;udemy || Instructor &#64;unibogazici || Ceo &#64;academyclubtr</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://github.com/engindemirog.png" class="card-img-top" alt="Writer 3">
-          <div class="overlay">
-            <span class="overlay-text"><a href="http://localhost:4200/writers" style="text-decoration: none;">Yazarları İnceleyin</a> </span>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Engin Demiroğ</h5>
-            <p class="card-text">Instructor & Lifetime learner. Software Engineer. www.kodlama.io</p>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*BTasEA-PDAzcoQ0A-lPyyg.png"
+              class="card-img-top"
+              alt="Article 3"
+            />
+            <div class="overlay">
+              <span class="overlay-text"
+                ><a
+                  href="/articles"
+                  style="text-decoration: none"
+                  >Makaleleri İnceleyin</a
+                >
+              </span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Spring Boot</h5>
+              <p class="card-text">
+                Backend de spring boot kullanımı. Spring boot bağımlılıkları...
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-      </a>
-      <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+    <!-- Article Writers Section -->
+    <div class="container my-5" id="writers">
+      <h2 class="section-title">Meet Our Writers</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://github.com/LuNiZz.png"
+              class="card-img-top"
+              alt="Writer 1"
+            />
+            <div class="overlay">
+              <span class="overlay-text"
+                ><a
+                  href="/writers"
+                  style="text-decoration: none"
+                  >Yazarları İnceleyin</a
+                >
+              </span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Can Değer</h5>
+              <p class="card-text">
+                Beyaz Takkeli Tornaci 👋 Can Deger
+                https://www.youtube.com/&#64;candeger
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://github.com/atilsamancioglu.png"
+              class="card-img-top"
+              alt="Writer 2"
+            />
+            <div class="overlay">
+              <span class="overlay-text"
+                ><a
+                  href="/writers"
+                  style="text-decoration: none"
+                  >Yazarları İnceleyin</a
+                >
+              </span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Atıl Samancıoğlu</h5>
+              <p class="card-text">
+                Bestselling Instructor &#64;udemy || Instructor &#64;unibogazici
+                || Ceo &#64;academyclubtr
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://github.com/engindemirog.png"
+              class="card-img-top"
+              alt="Writer 3"
+            />
+            <div class="overlay">
+              <span class="overlay-text"
+                ><a
+                  href="/writers"
+                  style="text-decoration: none"
+                  >Yazarları İnceleyin</a
+                >
+              </span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Engin Demiroğ</h5>
+              <p class="card-text">
+                Instructor & Lifetime learner. Software Engineer. www.kodlama.io
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-    </ul>
-  </footer>
 
-</body>
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <div class="col-md-4 d-flex align-items-center">
+        <a
+          href="/"
+          class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+        >
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary"
+          >© 2024 Company, Inc</span
+        >
+      </div>
+    </footer>
+  </body>
 </html>

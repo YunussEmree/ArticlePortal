@@ -7,11 +7,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgFor} from '@angular/common';
+import {RouterLink, RouterOutlet} from '@angular/router';
 
 
 @Component({
   selector: 'app-writers-section',
-  imports: [NgFor, WriterfilterPipe, CommonModule, FormsModule, HttpClientModule],
+  imports: [NgFor, WriterfilterPipe, CommonModule, FormsModule, HttpClientModule, RouterOutlet],
   templateUrl: './writers-section.component.html',
   styleUrl: './writers-section.component.css'
 })
