@@ -5,13 +5,16 @@ import { HomeComponent } from '../components/home/home.component';
 import { ArticleSectionComponent } from '../components/article-section/article-section.component';
 import { NotfoundComponent } from '../components/notfound/notfound.component';
 import { LoginGuard } from '../components/login/login.guard';
+import { ViewwriterComponent } from '../components/viewwriter/viewwriter.component';
+import { AdminpanelComponent } from '../components/adminpanel/adminpanel.component';
 export const routes: Routes = [
     
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'writers', component: WritersSectionComponent},
     {path: 'articles', component: ArticleSectionComponent},
-    {path: 'articlesAdmin', component: ArticleSectionComponent, canActivate: [LoginGuard]}, // test
+    {path: 'adminPanel', component: AdminpanelComponent, canActivate: [LoginGuard]},
+    {path: 'viewwriter' , component: ViewwriterComponent},
     {path: 'login' , component: LoginComponent},
     {path: '**', component: NotfoundComponent}
 

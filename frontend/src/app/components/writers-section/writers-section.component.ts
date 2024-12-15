@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { Writer } from './writer';
-import { AlertifyService } from '../services/alertify.service';
+import { AlertifyService } from '../../services/alertify.service';
 import { HttpClient } from '@angular/common/http';
 import { WriterfilterPipe } from '../../pipes/writerFilter/writerfilter.pipe';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {NgFor} from '@angular/common';
-import {RouterLink, RouterOutlet} from '@angular/router';
-import { AccountService } from '../services/account.service';
+import {RouterLink, RouterOutlet, Router} from '@angular/router';
+import { AccountService } from '../../services/account.service';
 
 
 @Component({
@@ -19,7 +19,7 @@ import { AccountService } from '../services/account.service';
 })
 export class WritersSectionComponent {
 
-  constructor(private AlertifyService : AlertifyService, private http:HttpClient, private accountService:AccountService) { }
+  constructor(private AlertifyService : AlertifyService, private http:HttpClient, private accountService:AccountService, private router:Router) { }
 
 
   isLoggedIn() {
@@ -33,9 +33,6 @@ export class WritersSectionComponent {
 
   writers!: Writer[];
 
-  viewArticle(articleId: number){
-    this.AlertifyService.success("Article with id: " + articleId + " is selected.");
-  }
 
   ngOnInit(): void {
   this.http.get<Writer[]>("http://localhost:3000/api/writers").subscribe(
@@ -44,5 +41,9 @@ export class WritersSectionComponent {
     }
   );
   }
+
+  viewWriter(writerId: number){
+    this.router.navigate(['/viewwriter/' + writerId]);
+    }
 
 }

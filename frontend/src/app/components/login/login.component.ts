@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { LoginGuard } from './login.guard';
 import { FormsModule, NgForm } from '@angular/forms';
-import { AccountService } from '../services/account.service';
+import { AccountService } from '../../services/account.service';
 import { User } from './user';
 import { CommonModule, NgIf } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,11 +17,17 @@ export class LoginComponent {
 
   model:User = new User();
 
-  constructor(private accountService:AccountService) {
-  }
+  constructor(private accountService:AccountService, private router:Router) {}
 
+  isLoggedIn() {
+    return this.accountService.isLoggedIn();
+  }
+  logout() {
+    this.accountService.logout();
+  }
+  
   login(form:NgForm){
-    if(this.accountService.login(this.model)) {  }
+    if(this.accountService.login(this.model)) {  this.router.navigate(['/articles']); }
     else {
       form.reset();
       alert("Invalid email or password!");

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { AccountService } from './components/services/account.service';
+import { AccountService } from './services/account.service';
 
 @Component({
   selector: 'app-root',

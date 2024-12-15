@@ -44,9 +44,13 @@ public class Writer {
     private String about;
 
     @Column(nullable = false)
+    private String bio;
+
+    @Column(nullable = false)
     private String photo;
 
     @Column(nullable = false)
     private Double rating;
+
 
 }

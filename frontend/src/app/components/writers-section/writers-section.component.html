@@ -33,7 +33,7 @@
           <li><a class="dropdown-item" href="#">Settings</a></li>
           <li><a class="dropdown-item" href="#">Profile</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Sign out</a></li>
+          <li><a class="dropdown-item" href="#" (click)="logout()">Sign out</a></li>
         </ul>
       </div>
     </div>
@@ -58,7 +58,7 @@
               <p class="card-text">{{ writer.about }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
+                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="viewWriter(writer.id)">View</button>
                 </div>
                 <small class="rating" style="color: #2ab047;">★ {{ writer.rating }}</small>
               </div>

@@ -9,8 +9,8 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { AlertifyService } from '../services/alertify.service';
-import { AccountService } from '../services/account.service';
+import { AlertifyService } from '../../services/alertify.service';
+import { AccountService } from '../../services/account.service';
 
 @Component({
   selector: 'app-article-section',
@@ -55,6 +55,7 @@ export class ArticleSectionComponent implements OnInit {
   ngOnInit(): void {
   this.http.get<Article[]>("http://localhost:3000/api/articles").subscribe(
     (response: Article[]) => {
+      console.log(response);
       this.articles = response;
     }
   );
