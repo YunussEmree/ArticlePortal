@@ -14,7 +14,7 @@ export const routes: Routes = [
     {path: 'writers', component: WritersSectionComponent},
     {path: 'articles', component: ArticleSectionComponent},
     {path: 'adminPanel', component: AdminpanelComponent, canActivate: [LoginGuard]},
-    {path: 'viewwriter' , component: ViewwriterComponent},
+    {path: 'viewwriter/:id' , component: ViewwriterComponent},
     {path: 'login' , component: LoginComponent},
     {path: '**', component: NotfoundComponent}
 

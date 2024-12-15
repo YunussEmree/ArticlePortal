@@ -1,48 +1,63 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../../services/account.service';
-import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
-import { User } from '../login/user';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { Writer } from '../writers-section/writer';
 
 @Component({
   selector: 'app-viewwriter',
   imports: [NgIf, NgFor],
   templateUrl: './viewwriter.component.html',
-  styleUrl: './viewwriter.component.css',
+  styleUrls: ['./viewwriter.component.css'],
 })
-export class ViewwriterComponent {
-  constructor(private accountService: AccountService, private http:HttpClient) {}
+export class ViewwriterComponent implements OnInit {
+  model: Writer = new Writer(0, '', '', '', '', ''); // Kullanıcı bilgileri için model
+  writerId = 0;
 
+  constructor(
+    private accountService: AccountService,
+    private http: HttpClient,
+    private route: ActivatedRoute // Route parametrelerini almak için
+  ) {}
+
+  ngOnInit(): void {
+    // Route parametresinden ID'yi al
+    this.writerId = Number(this.route.snapshot.paramMap.get('id'));
+    if (this.writerId) {
+      this.getWriter(this.writerId);
+    }
+  }
+
+  // Kullanıcı giriş kontrolü
+  isLoggedIn() {
+    return this.accountService.isLoggedIn();
+  }
+
+  // Çıkış yap
+  logout() {
+    this.accountService.logout();
+  }
 
   getStarsArray(): number[] {
     return Array(5).fill(0);
   }
 
-  isLoggedIn() {
-    return this.accountService.isLoggedIn();
-  }
-  logout() {
-    this.accountService.logout();
-  }
-
-  model: User = new User();
-
-  photoUrl: string = 'https://via.placeholder.com/150';
-  name: string = 'Emre';
-  about: string = 'I am a software developer';
-  rating: number = 4.5;
-  
-  ngOnInit(): void {
-    this.http.get<User>("http://localhost:3000/api/writers/").subscribe(
-      (response: User) => {
+  // API'den yazar bilgilerini getir
+  getWriter(id: number) {
+    const apiUrl = `http://localhost:3000/api/writers/${id}`;
+    this.http.get<Writer>(apiUrl).subscribe(
+      (response: Writer) => {
+        console.log('Yazar bilgisi alındı:', response);
         this.model = response;
+        this.model.username = response.username; // Gelen veriye göre güncelle
+        this.model.bio = response.bio || 'Yazar hakkında bilgi bulunamadı.';
+        this.model.rating = response.rating || "0";
+        this.model.photo = response.photo || "https://via";
+      },
+      (error) => {
+        console.error('Yazar bilgisi alınırken hata oluştu:', error);
       }
     );
   }
-
-
-
-
 }
