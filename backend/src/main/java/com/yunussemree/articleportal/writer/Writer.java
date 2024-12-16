@@ -52,5 +52,14 @@ public class Writer {
     @Column(nullable = false)
     private Double rating;
 
+    @Column(nullable = false)
+    private String articles;
+
+    @Column(nullable = false)
+    private String projects;
+
+    @Column(nullable = false)
+    private String awards;
+
 
 }

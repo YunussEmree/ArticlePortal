@@ -1,5 +1,6 @@
 package com.yunussemree.articleportal.writer;
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
@@ -17,6 +18,10 @@ public class WriterDTO {
     private String username;
 
     @NotNull
+    @Size(max = 2555)
+    private String bio;
+
+    @NotNull
     @Size(max = 255)
     private String about;
 
@@ -26,5 +31,14 @@ public class WriterDTO {
 
     @NotNull
     private Double rating;
+
+    @Size(max = 255)
+    private String articles;
+
+    @Size(max = 255)
+    private String projects;
+
+    @Size(max = 255)
+    private String awards;
 
 }

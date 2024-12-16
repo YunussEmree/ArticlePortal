@@ -49,17 +49,25 @@ public class WriterService {
     private WriterDTO mapToDTO(final Writer writer, final WriterDTO writerDTO) {
         writerDTO.setId(writer.getId());
         writerDTO.setUsername(writer.getUsername());
+        writerDTO.setBio(writer.getBio());
         writerDTO.setAbout(writer.getAbout());
         writerDTO.setPhoto(writer.getPhoto());
         writerDTO.setRating(writer.getRating());
+        writerDTO.setAwards(writer.getAwards());
+        writerDTO.setProjects(writer.getProjects());
+        writerDTO.setArticles(writer.getArticles());
         return writerDTO;
     }
 
     private Writer mapToEntity(final WriterDTO writerDTO, final Writer writer) {
         writer.setUsername(writerDTO.getUsername());
         writer.setAbout(writerDTO.getAbout());
+        writer.setBio(writerDTO.getBio());
         writer.setPhoto(writerDTO.getPhoto());
         writer.setRating(writerDTO.getRating());
+        writer.setAwards(writerDTO.getAwards());
+        writer.setProjects(writerDTO.getProjects());
+        writer.setArticles(writerDTO.getArticles());
         return writer;
     }
 
