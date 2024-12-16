@@ -11,6 +11,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AlertifyService } from '../../services/alertify.service';
 import { AccountService } from '../../services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-article-section',
@@ -23,7 +24,7 @@ import { AccountService } from '../../services/account.service';
 
 export class ArticleSectionComponent implements OnInit {
 
-  constructor(private AlertifyService : AlertifyService, private http:HttpClient, private accountService:AccountService) { }
+  constructor(private AlertifyService : AlertifyService, private http:HttpClient, private accountService:AccountService, private router:Router) { }
 
 
   isLoggedIn() {
@@ -47,7 +48,7 @@ export class ArticleSectionComponent implements OnInit {
       (response: Article) => {
           response.content = response.content.replace(/\n/g, "<br>");
           this.selectedArticle = response;
-          this.AlertifyService.alert(this.selectedArticle.content);
+          this.AlertifyService.alert(this.selectedArticle.title, this.selectedArticle.content);
       }
     );
   }
@@ -60,5 +61,8 @@ export class ArticleSectionComponent implements OnInit {
     }
   );
   }
-
+  
+  viewProfile(){
+    this.router.navigate(['/profile/' + 10009]);
+    }
 }

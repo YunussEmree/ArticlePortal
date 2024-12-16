@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { AccountService } from '../../services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { AccountService } from '../../services/account.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor(private accountService: AccountService) {}
+  constructor(private accountService: AccountService, private router:Router) {}
 
   isLoggedIn() {
     return this.accountService.isLoggedIn();
@@ -18,4 +19,8 @@ export class HomeComponent {
     this.accountService.logout();
   }
 
+  
+  viewProfile(){
+    this.router.navigate(['/profile/' + 10009]);
+    }
 }

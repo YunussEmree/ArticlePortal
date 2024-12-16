@@ -33,4 +33,8 @@ export class LoginComponent {
       alert("Invalid email or password!");
     }
   }
+  
+  viewProfile(){
+    this.router.navigate(['/profile/' + 10009]);
+    }
 }

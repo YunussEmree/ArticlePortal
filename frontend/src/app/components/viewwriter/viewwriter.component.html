@@ -70,9 +70,9 @@
           <ul class="dropdown-menu text-small">
             <li><a class="dropdown-item" href="#">New article...</a></li>
             <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="/profile/10009">Profile</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" (click)="logout()">Sign out</a></li>
+            <li><a class="dropdown-item" href="#" (click)="logout()">Sign out</a></li>
           </ul>
         </div>
       </div>
@@ -81,25 +81,30 @@
 
 
 
-  <div class="card shadow-sm mt-4 mx-auto" style="max-width: 400px;">
+  <div class="card shadow-sm mt-4 mx-auto" style="max-width: 80%;">
     <img
       [src]="model.photo"
       class="card-img-top rounded-circle mx-auto mt-3"
       alt="Yazar Fotoğrafı"
       style="width: 120px; height: 120px; object-fit: cover; border: 2px solid #ddd;"
     />
+    
     <div class="card-body text-center">
       <h5 class="card-title">{{ model.username }}</h5>
+      <p class="card-text"> <strong>Biography</strong></p>
       <p class="card-text text-muted">{{ model.bio }}</p>
+      <p class="card-text"> <strong>Awards</strong></p>
+      <p class="card-text text-muted">{{ model.awards }}</p>
+      <p class="card-text"> <strong>Articles</strong></p>
+      <p class="card-text text-muted">{{ model.articles }}</p>
+      <p class="card-text"> <strong>Projects</strong></p>
+      <p class="card-text text-muted">{{ model.projects }}</p>
       <div class="d-flex justify-content-center align-items-center">
         <span class="me-2 text-warning" *ngFor="let star of getStarsArray(); let i = index">
           <i class="bi bi-star-fill" *ngIf="i < +model.rating"></i>
           <i class="bi bi-star" *ngIf="i >= +model.rating"></i>
         </span>
       </div>
-    </div>
-    <div class="card-footer text-center">
-      <button class="btn btn-danger" (click)="logout()">Çıkış Yap</button>
     </div>
   </div>
   
