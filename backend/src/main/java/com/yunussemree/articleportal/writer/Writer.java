@@ -9,6 +9,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import java.time.OffsetDateTime;
+
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
@@ -44,6 +46,7 @@ public class Writer {
     private String about;
 
     @Column(nullable = false)
+    @Size(max = 50000)
     private String bio;
 
     @Column(nullable = false)

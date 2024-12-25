@@ -18,7 +18,7 @@ public class WriterDTO {
     private String username;
 
     @NotNull
-    @Size(max = 2555)
+    @Size(max = 50000)
     private String bio;
 
     @NotNull
